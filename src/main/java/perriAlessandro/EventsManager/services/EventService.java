@@ -28,7 +28,7 @@ public class EventService {
     private Cloudinary cloudinaryUploader;
 
 
-    public Page<Event> getDeviceList(int page, int size, String sortBy) {
+    public Page<Event> getEventList(int page, int size, String sortBy) {
         if (size > 100) size = 100;
         Pageable pageable = PageRequest.of(page, size, Sort.by(sortBy));
         return this.eventDAO.findAll(pageable);
