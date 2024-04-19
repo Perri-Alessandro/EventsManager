@@ -19,6 +19,7 @@ public class Event {
     private LocalDate date;
     private String place;
     private long placesAvailable;
+    private String image;
 
     @ManyToMany(mappedBy = "events")
     private Set<User> participants = new HashSet<>();

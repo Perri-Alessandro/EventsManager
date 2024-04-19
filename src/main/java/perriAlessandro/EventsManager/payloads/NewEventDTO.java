@@ -18,4 +18,19 @@ public record NewEventDTO(@NotEmpty(message = "Il Titolo dell'evento è obblogat
                           @Size(min = 5, max = 30, message = "Il Luogo dev'essere compresa tra i 5 e i 30 caratteri")
                           String place) {
 
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public String getPlace() {
+        return place;
+    }
 }
