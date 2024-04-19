@@ -59,7 +59,7 @@ public class EventController {
     @DeleteMapping("/{eventId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PreAuthorize("hasRole('Admin')")
-    private void findByEventIdAndDelete(@PathVariable Long eventId) {
+    public void findByEventIdAndDelete(@PathVariable Long eventId) {
         eventService.findByIdAndDelete(eventId);
     }
 
