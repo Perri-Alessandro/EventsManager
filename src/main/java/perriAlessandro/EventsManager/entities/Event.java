@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Data
@@ -17,4 +19,7 @@ public class Event {
     private LocalDate date;
     private String place;
     private long placesAvailable;
+
+    @ManyToMany(mappedBy = "events")
+    private Set<User> participants = new HashSet<>();
 }
