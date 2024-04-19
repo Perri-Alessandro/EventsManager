@@ -2,6 +2,7 @@ package perriAlessandro.EventsManager.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -10,6 +11,7 @@ import java.util.Set;
 @Entity
 @Data
 @Table(name = "event")
+@NoArgsConstructor
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
