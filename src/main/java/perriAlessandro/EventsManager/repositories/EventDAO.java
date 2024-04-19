@@ -7,7 +7,7 @@ import perriAlessandro.EventsManager.entities.User;
 import java.util.List;
 
 public interface EventDAO extends JpaRepository<Event, Long> {
-    boolean existsByUser(User user);
+    boolean existsByParticipants(User user);
 
-    List<Event> findByUser(User user);
+    List<Event> findByParticipants(User user);
 }
